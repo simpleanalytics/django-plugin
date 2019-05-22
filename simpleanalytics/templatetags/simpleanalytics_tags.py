@@ -27,7 +27,7 @@ register.simple_tag(
             script=_script_element,
         )
     ),
-    name='simple_analytics_sync',
+    name='simpleanalytics_sync',
 )
 
 
@@ -37,7 +37,7 @@ register.simple_tag(
             script=_script_element,
         )
     ),
-    name='simple_analytics_async',
+    name='simpleanalytics_async',
 )
 
 
@@ -48,7 +48,7 @@ register.simple_tag(
             img=_img_element,
         ),
     ),
-    name='simple_analytics_noscript_block',
+    name='simpleanalytics_noscript_block',
 )
 
 # Installs the simpleanalytics noscript pixel in an image element
@@ -58,5 +58,5 @@ register.simple_tag(
             img=_img_element,
         ),
     ),
-    name='simple_analytics_noscript_img',
+    name='simpleanalytics_noscript_img',
 )

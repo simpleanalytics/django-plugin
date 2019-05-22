@@ -25,11 +25,11 @@ Next use the `templatetag` in your template:
 		<title>{% block page_title %}{{ site.name }}{% endblock %}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     ...
-    {% simple_analytics_sync %}
+    {% simpleanalytics_sync %}
     ...
     </head>
     <body>
-      {% simple_analytics_noscript_block %}
+      {% simpleanalytics_noscript_block %}
     </body>
 </html>
 ```
@@ -57,27 +57,28 @@ This will translate to roughly this:
 
 This app has four templatetags:
 
-- simple_analytics_sync
-- simple_analytics_async
-- simple_analytics_noscript_block
-- simple_analytics_noscript_img 
+- simpleanalytics_sync
+- simpleanalytics_async
+- simpleanalytics_noscript_block
+- simpleanalytics_noscript_img 
 
-`simple_analytics_sync` converts to a plain `<script>` tag without the `async`
+`simpleanalytics_sync` converts to a plain `<script>` tag without the `async`
 keyword. 
 
-`simple_analytics_async` converts to a plain `<script>` tag with the `async`
+`simpleanalytics_async` converts to a plain `<script>` tag with the `async`
 keyword. 
 
-`simple_analytics_noscript_block` converts to an `<noscript>` block which 
+`simpleanalytics_noscript_block` converts to an `<noscript>` block which 
 includes an `img` element which is used to load the image. Use this when you 
 don't have and don't need a `<noscript>` block on your page at all. 
 
-`simple_analytics_noscript_img` converts to an `<img>` tag which src points to
+`simpleanalytics_noscript_img` converts to an `<img>` tag which src points to
 the hello.img. Use this when you're using a `<noscript>` block and you want to
 add privacy friendly stats to your page.
 
 # Compatibility
 
-Tested on Django 2.2.
+Tested on Django 2.2, but we think you should be able to run on any recent 
+Django deployment. Please file an issue when it doesn't.
 
 
