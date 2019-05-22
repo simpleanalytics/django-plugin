@@ -1,6 +1,6 @@
 """
 
-(c) 2019 by simpleanalytics.io. All rights reserved
+(c) 2019 Simple Analytics. All rights reserved.
 
 This program is distributed in the hope that it will be useful, but is provided AS IS with ABSOLUTELY NO WARRANTY;
 The entire risk as to the quality and performance of the program is with you. Should the program prove defective,

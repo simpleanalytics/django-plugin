@@ -12,6 +12,8 @@ absence of any warranty.
 """
 from setuptools import setup
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
 setup(
     name='simpleanalytics',
@@ -32,9 +34,12 @@ setup(
         "Framework :: Django :: 2.1",
         "Framework :: Django :: 2.2",
     ],
-    version='1.0.2',
-    description='simpleanalytics templatetags for Django',
+    version='1.0.3',
+    description='Simple Analytics template tags for Django',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/simpleanalytics/django-plugin",
     packages=['simpleanalytics', 'simpleanalytics.templatetags', ],
-    author='simpleanalytics.io',
+    author='Simple Analytics',
     author_email='support@mail.simpleanalytics.io',
 )
