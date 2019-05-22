@@ -32,7 +32,7 @@ setup(
         "Framework :: Django :: 2.1",
         "Framework :: Django :: 2.2",
     ],
-    version='1.0.1',
+    version='1.0.2',
     description='simpleanalytics templatetags for Django',
     packages=['simpleanalytics', 'simpleanalytics.templatetags', ],
     author='simpleanalytics.io',
