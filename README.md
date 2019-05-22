@@ -8,7 +8,7 @@ Want privacy friendly analytics for Django? You're at the right place.
 
 Install the plugin:
 
-`pip install django-simpleanalytics`
+`pip install simpleanalytics`
 
 # Using it
 
@@ -84,7 +84,7 @@ add privacy friendly stats to your page.
 
 # Compatibility
 
-Tested on Django 2.2, but we think you should be able to run on any recent
-Django deployment. Please file an issue when it doesn't.
+Tested on Django 2.2, but we think this should run on any recent Django 
+deployment. Please raise an issue when it doesn't.
 
 
