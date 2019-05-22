@@ -1,0 +1,3 @@
+build/*
+dist/*
+simpleanalytics.egg-info

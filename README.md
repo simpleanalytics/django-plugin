@@ -1,14 +1,19 @@
-# simpleanalytics for Django
+# Simple Analytics for Django
+
 Want privacy friendly analytics for Django? You're at the right place.
 
+> You need an account [on Simple Analytics](https://simpleanalytics.com) to see your stats collected by this plugin.
+
 # Installing it
+
 Install the plugin:
 
 `pip install django-simpleanalytics`
 
 # Using it
+
 Add the package to the `INSTALLED_APPS`:
-```python 
+```python
 INSTALLED_APPS = [
    ...,
    simpleanalytics,
@@ -16,7 +21,8 @@ INSTALLED_APPS = [
 ```
 
 Next use the `templatetag` in your template:
-``` 
+
+```
 <!DOCTYPE html>
 {% load staticfiles simpleanalytics_tags %}
 <html>
@@ -60,17 +66,17 @@ This app has four templatetags:
 - simpleanalytics_sync
 - simpleanalytics_async
 - simpleanalytics_noscript_block
-- simpleanalytics_noscript_img 
+- simpleanalytics_noscript_img
 
 `simpleanalytics_sync` converts to a plain `<script>` tag without the `async`
-keyword. 
+keyword.
 
 `simpleanalytics_async` converts to a plain `<script>` tag with the `async`
-keyword. 
+keyword.
 
-`simpleanalytics_noscript_block` converts to an `<noscript>` block which 
-includes an `img` element which is used to load the image. Use this when you 
-don't have and don't need a `<noscript>` block on your page at all. 
+`simpleanalytics_noscript_block` converts to an `<noscript>` block which
+includes an `img` element which is used to load the image. Use this when you
+don't have and don't need a `<noscript>` block on your page at all.
 
 `simpleanalytics_noscript_img` converts to an `<img>` tag which src points to
 the hello.img. Use this when you're using a `<noscript>` block and you want to
@@ -78,7 +84,7 @@ add privacy friendly stats to your page.
 
 # Compatibility
 
-Tested on Django 2.2, but we think you should be able to run on any recent 
+Tested on Django 2.2, but we think you should be able to run on any recent
 Django deployment. Please file an issue when it doesn't.
 
 
