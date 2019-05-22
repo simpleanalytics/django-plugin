@@ -44,7 +44,7 @@ register.simple_tag(
 # Installs the simpleanalytics noscript pixel wrapped in an noscript block
 register.simple_tag(
     func=lambda *args, **kwargs: mark_safe(
-        '<noscript><img src="{img}" alt="hello"></noscript>'.format(
+        '<noscript><img src="{img}" alt=""></noscript>'.format(
             img=_img_element,
         ),
     ),
