@@ -24,7 +24,7 @@ Next use the `templatetag` in your template:
 
 ```
 <!DOCTYPE html>
-{% load staticfiles simpleanalytics_tags %}
+{% load static simpleanalytics_tags %}
 <html>
 	<head>
 		<meta charset="utf-8">

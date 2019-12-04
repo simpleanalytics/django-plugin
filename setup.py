@@ -41,11 +41,10 @@ setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Page Counters",
-        "Framework :: Django :: 1.8",
-        "Framework :: Django :: 1.9",
         "Framework :: Django :: 2.0",
         "Framework :: Django :: 2.1",
         "Framework :: Django :: 2.2",
+        "Framework :: Django :: 3.0",
     ],
     version='1.0.3',
     description='Simple Analytics template tags for Django',
@@ -56,6 +55,6 @@ setup(
     author='Simple Analytics',
     author_email='support@mail.simpleanalytics.io',
     install_requires=[
-        'Django>=1.8',
+        'Django>=2.0',
     ],
 )
