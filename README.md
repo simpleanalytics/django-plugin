@@ -1,16 +1,20 @@
-# Simple Analytics for Django
+<a href="https://simpleanalytics.com/?ref=github.com/simpleanalytics/django-plugin">
+  <img src="https://assets.simpleanalytics.com/images/logos/logo-github-readme.png" alt="Simple Analytics logo" align="right" height="62" />
+</a>
+
+# Django Plugin
 
 Want privacy friendly analytics for Django? You're at the right place.
 
 > You need an account [on Simple Analytics](https://simpleanalytics.com) to see your stats collected by this plugin.
 
-# Installing it
+## Installing it
 
 Install the plugin:
 
 `pip install simpleanalytics`
 
-# Using it
+## Using it
 
 Add the package to the `INSTALLED_APPS`:
 ```python
@@ -59,7 +63,7 @@ This will translate to roughly this:
 </html>
 ```
 
-# More
+## More
 
 This app has four templatetags:
 
@@ -82,7 +86,7 @@ don't have and don't need a `<noscript>` block on your page at all.
 the hello.img. Use this when you're using a `<noscript>` block and you want to
 add privacy friendly stats to your page.
 
-# Compatibility
+## Compatibility
 
 Tested on Django 2.2, but we think this should run on any recent Django 
 deployment. Please raise an issue when it doesn't.
