@@ -1,4 +1,4 @@
-<a href="https://simpleanalytics.com/?ref=github.com/simpleanalytics/django-plugin">
+<a href="https://www.simpleanalytics.com/?ref=github.com/simpleanalytics/django-plugin">
   <img src="https://assets.simpleanalytics.com/images/logos/logo-github-readme.png" alt="Simple Analytics logo" align="right" height="62" />
 </a>
 
@@ -6,7 +6,7 @@
 
 Want privacy friendly analytics for Django? You're at the right place.
 
-> You need an account [on Simple Analytics](https://simpleanalytics.com) to see your stats collected by this plugin.
+> You need an account [on Simple Analytics](https://www.simpleanalytics.com) to see your stats collected by this plugin.
 
 ## Installing it
 
@@ -38,9 +38,6 @@ Next use the `templatetag` in your template:
     {% simpleanalytics_sync %}
     ...
     </head>
-    <body>
-      {% simpleanalytics_noscript_block %}
-    </body>
 </html>
 ```
 
@@ -54,12 +51,9 @@ This will translate to roughly this:
 		<title>brwnppr.com</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     ...
-    <script type="text/javascript" src="https://cdn.simpleanalytics.io/hello.js"></script>
+    <script type="text/javascript" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     ...
     </head>
-    <body>
-      <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt="hello"></noscript>
-    </body>
 </html>
 ```
 
@@ -69,22 +63,12 @@ This app has four templatetags:
 
 - simpleanalytics_sync
 - simpleanalytics_async
-- simpleanalytics_noscript_block
-- simpleanalytics_noscript_img
 
 `simpleanalytics_sync` converts to a plain `<script>` tag without the `async`
 keyword.
 
 `simpleanalytics_async` converts to a plain `<script>` tag with the `async`
 keyword.
-
-`simpleanalytics_noscript_block` converts to an `<noscript>` block which
-includes an `img` element which is used to load the image. Use this when you
-don't have and don't need a `<noscript>` block on your page at all.
-
-`simpleanalytics_noscript_img` converts to an `<img>` tag which src points to
-the hello.img. Use this when you're using a `<noscript>` block and you want to
-add privacy friendly stats to your page.
 
 ## Compatibility
 
