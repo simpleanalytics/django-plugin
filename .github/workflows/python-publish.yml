@@ -27,14 +27,11 @@ jobs:
         pip install bump2version
 
     - name: Bump version
+      id: bump_version
       run: |
-        bump2version patch --allow-dirty --list | grep new_version= | cut -d'=' -f2 > version.txt
+        VERSION=$(bump2version patch --allow-dirty --list | grep new_version= | cut -d'=' -f2)
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
       shell: bash
-
-    - name: Get new version
-      id: vars
-      run: |
-        echo "VERSION=$(cat version.txt)" >> $GITHUB_ENV
 
     - name: Commit version bump
       uses: stefanzweifel/git-auto-commit-action@v4
@@ -46,7 +43,6 @@ jobs:
           your_package/__init__.py  # If version is specified here
 
     - name: Create GitHub Release
-      id: create_release
       uses: softprops/action-gh-release@v1
       with:
         tag_name: "v${{ env.VERSION }}"
