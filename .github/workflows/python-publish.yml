@@ -13,7 +13,7 @@ on:
     types: [published]
 
 permissions:
-  contents: read
+  contents: write  # Needed to push changes back to the repository
 
 jobs:
   deploy:
@@ -34,6 +34,12 @@ jobs:
         regex: true
         include: 'setup.py'
 
+    - name: Commit version bump
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: 'Version bump in setup.py to ${{ env.VERSION }} [skip ci]'
+        file_pattern: setup.py
+
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
@@ -52,3 +58,4 @@ jobs:
       with:
         user: simpleanalytics
         password: ${{ secrets.PYPI_API_TOKEN }}
+
