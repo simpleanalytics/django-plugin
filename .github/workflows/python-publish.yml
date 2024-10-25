@@ -17,7 +17,7 @@ jobs:
         fetch-depth: 0  # Fetch all history for tags and branches
 
     - name: Set up Python
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v5
       with:
         python-version: '3.x'
 
@@ -34,16 +34,14 @@ jobs:
       shell: bash
 
     - name: Commit version bump
-      uses: stefanzweifel/git-auto-commit-action@v4
+      uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: 'Version bump to ${{ env.VERSION }} [skip ci]'
         file_pattern: |
           setup.py
-          setup.cfg  # Include if you have it
-          your_package/__init__.py  # If version is specified here
 
     - name: Create GitHub Release
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2
       with:
         tag_name: "v${{ env.VERSION }}"
         name: "v${{ env.VERSION }}"
@@ -59,6 +57,6 @@ jobs:
       run: python -m build
 
     - name: Publish package to PyPI
-      uses: pypa/gh-action-pypi-publish@master
+      uses: pypa/gh-action-pypi-publish@v1
       with:
         password: ${{ secrets.PYPI_API_TOKEN }}
