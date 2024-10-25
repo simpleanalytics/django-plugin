@@ -30,9 +30,7 @@ from django.utils.safestring import mark_safe
 register = template.Library()
 
 
-_script_element = 'https://cdn.simpleanalytics.io/hello.js'
-_img_element = 'https://api.simpleanalytics.io/hello.gif'
-
+_script_element = 'https://script.simpleanalyticscdn.com/latest.js'
 
 register.simple_tag(
     func=lambda *args, **kwargs: mark_safe(
@@ -51,25 +49,4 @@ register.simple_tag(
         )
     ),
     name='simpleanalytics_async',
-)
-
-
-# Installs the simpleanalytics noscript pixel wrapped in an noscript block
-register.simple_tag(
-    func=lambda *args, **kwargs: mark_safe(
-        '<noscript><img src="{img}" alt=""></noscript>'.format(
-            img=_img_element,
-        ),
-    ),
-    name='simpleanalytics_noscript_block',
-)
-
-# Installs the simpleanalytics noscript pixel in an image element
-register.simple_tag(
-    func=lambda *args, **kwargs: mark_safe(
-        '<img src="{img}" alt="">'.format(
-            img=_img_element,
-        ),
-    ),
-    name='simpleanalytics_noscript_img',
 )
