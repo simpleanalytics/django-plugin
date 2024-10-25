@@ -46,7 +46,7 @@ setup(
         "Framework :: Django :: 2.2",
         "Framework :: Django :: 3.0",
     ],
-    version='1.0.6',
+    version='1.0.7',
     description='Simple Analytics template tags for Django',
     long_description=long_description,
     long_description_content_type="text/markdown",
