@@ -30,7 +30,7 @@ from django.utils.safestring import mark_safe
 register = template.Library()
 
 
-_script_element = 'https://script.simpleanalyticscdn.com/latest.js'
+_script_element = 'https://scripts.simpleanalyticscdn.com/latest.js'
 
 register.simple_tag(
     func=lambda *args, **kwargs: mark_safe(
