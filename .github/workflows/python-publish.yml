@@ -39,6 +39,7 @@ jobs:
         commit_message: 'Version bump to ${{ env.VERSION }} [skip ci]'
         file_pattern: |
           setup.py
+          .bumpversion.cfg
 
     - name: Create GitHub Release
       uses: softprops/action-gh-release@v2
